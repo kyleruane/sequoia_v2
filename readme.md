@@ -1,0 +1,1 @@
+Refresh of the Sequoia template for Barley (http://getbarley.com), work in progress
