@@ -7,7 +7,6 @@
     <title>Sequoia v2</title>
 
     <!-- Bootstrap -->
-    <link href="css/jasny-bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -20,6 +19,22 @@
 <body>
     <div class="container">
         
+        <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+          <a class="navmenu-brand" href="#">Brand</a>
+          <ul class="nav navmenu-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Link</a></li>
+            <li><a href="#">Link</a></li>
+          </ul>
+        </nav>
+        <div class="navbar navbar-default navbar-fixed-top">
+          <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
         <header>
             <h1>Header include test</h1>
         </header>
@@ -50,11 +65,7 @@
     </div> <!--end main container-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="js/custom.modernizr.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.fitvids.js"></script>
-    <script src="js/jquery.jpanelmenu.min.js"></script>
-    <script src="js/template.js"></script>
+    <script src="template.js"></script>
 
 </body>
 </html>

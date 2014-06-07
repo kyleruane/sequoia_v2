@@ -5,6 +5,12 @@ module.exports = function(grunt) {
     clean: {
       build: ['build/']
     },
+    concat: {
+      basic: {
+        src: ['site/js/*.js'],
+        dest: 'build/template.js'
+      }
+    },
     less: {
       development: {
         options: {
@@ -43,7 +49,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-concat');
 
   grunt.registerTask('build', ['clean', 'less', 'includes']);
-  grunt.registerTask('default', ['build', 'watch']);
+  grunt.registerTask('default', ['build', 'concat', 'watch']);
 };
