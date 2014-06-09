@@ -928,6 +928,7 @@
   }
 }
 
+// Custom Mixins
 .font-smooth {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -942,4 +943,14 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: @font-family-sans-serif;
+}
+.border-style(@side) {
+  border-@{side}: 1px solid darken(@gray-lighter, 5%);
+}
+.vert-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
