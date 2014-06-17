@@ -34,6 +34,19 @@ module.exports = function(grunt) {
         }
       }
     },
+    copy: {
+      main: {
+        files: [
+          { 
+            expand: true, 
+            src: ['site/fonts/*'], 
+            dest: 'build/fonts/',
+            flatten: true, 
+            filter: 'isFile'
+          },
+        ]
+      }
+    },
     watch: {
       styles: {
         files: ['site/less/**/*.less'], // which files to watch
@@ -50,7 +63,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('build', ['clean', 'less', 'includes']);
-  grunt.registerTask('default', ['build', 'concat', 'watch']);
+  grunt.registerTask('default', ['build', 'concat', 'copy', 'watch']);
 };

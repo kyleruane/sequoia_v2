@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sequoia v2</title>
 
-    <!-- Font Awesome via CDN -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700' rel='stylesheet' type='text/css'>
-    <!-- Bootstrap + Custom Styles -->
+    <!-- Bootstrap + Font Awesome + Custom Styles -->
     <link href="css/style.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,36 +36,38 @@
             <section class="top-bar">
                 <div class="text-area">
                     <i class="fa fa-map-marker"></i>
-                    <p>123 Main Street, Springfield, IL</p>
+                     <span data-barley="business_company_address" data-barley-editor="mini"><p>123 Main Street, Springfield, IL</p></span>
                 </div>
                 <div class="dropdown social">
-                    <a id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="">
+                    <a id="social" role="button" data-toggle="dropdown" data-target="#" href="">
                         <i class="fa fa-thumbs-o-up"></i> Follow Us
                     </a>
-                    <ul class="dropdown-menu social-links" role="menu" aria-labelledby="dLabel">
-                        <li><a href="#" class="twitter">Twitter</a></li>
-                        <li><a href="#" class="facebook">Facebook</a></li>
-                        <li><a href="#" class="instagram">Instagram</a></li>
-                        <li><a href="#" class="google">Google+</a></li>
-                        <li><a href="#" class="pinterest">Pinterest</a></li>
+                    <ul class="dropdown-menu social-links" role="menu" aria-labelledby="social">
+                        <li data-barley="social_acct_a" data-barley-editor="mini" data-placeholder="+ Add Account"><a href="#" class="twitter">Twitter</a></li>
+                        <li data-barley="social_acct_b" data-barley-editor="mini" data-placeholder="+ Add Account"><a href="#" class="facebook">Facebook</a></li>
+                        <li data-barley="social_acct_c" data-barley-editor="mini" data-placeholder="+ Add Account"><a href="#" class="instagram">Instagram</a></li>
+                        <li data-barley="social_acct_d" data-barley-editor="mini" data-placeholder="+ Add Account"><a href="#" class="google">Google+</a></li>
+                        <li data-barley="social_acct_e" data-barley-editor="mini" data-placeholder="+ Add Account"><a href="#" class="pinterest">Pinterest</a></li>
                     </ul>
                 </div>
                 <div class="phone">
                     <i class="fa fa-phone"></i>
-                    <p>800-555-1234</p>
+                    <span data-barley="business_company_phonenumber" data-barley-editor="mini" data-placeholder="Add Phone #"><p>800-555-1234</p>
                 </div>
             </section>
             <section class="main-strip">
                 <h1 class="text">Sequoia</h1>
                 <h1 class="logo" style="display:none;"><img src="http://placehold.it/500x100&text=logo"></h1>  <!-- Maybe set img as background and use "contain" css property? -->
                 <nav class="main-nav">
-                    <ul>
+                    <ul class="navigation right hide-for-small" data-barley-navigation="left">
+                        <!-- barleynav -->
                         <li><a href="index.html">Home</a></li>
                         <li><a href="team.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="gallery.html">Portfolio</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
+                        <!-- endbarleynav -->
                     </ul>
                 </nav>
             </section>
