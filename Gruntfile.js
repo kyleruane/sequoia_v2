@@ -36,7 +36,7 @@ module.exports = function(grunt) {
     },
     watch: {
       styles: {
-        files: ['less/**/*.less'], // which files to watch
+        files: ['site/less/**/*.less'], // which files to watch
         tasks: ['less'],
         options: {
           nospawn: true
