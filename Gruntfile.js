@@ -44,6 +44,13 @@ module.exports = function(grunt) {
             flatten: true, 
             filter: 'isFile'
           },
+          {
+            expand: true, 
+            src: ['site/images/*'], 
+            dest: 'build/images/',
+            flatten: true, 
+            filter: 'isFile'
+          },
         ]
       }
     },
