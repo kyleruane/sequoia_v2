@@ -17,6 +17,10 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="Full Blog Entries Feed" href="/feed" />
+
 </head>
 <body>
     <div class="container site-wrapper">
@@ -73,21 +77,21 @@
             </section>
         </header>
 
-    <div class="gallery-image">
+    <div class="gallery-image" data-barley="gallery_image" data-barley-editor="image-special">
         <img src="http://lorempixel.com/g/1400/800/nature" />
     </div>
     <div class="main-content divide">
         <article>
             <header>
-                <h2 class="page-title">Gallery Item</h2>
+                <h2 class="page-title" data-barley="gallery_title" data-barley-editor="mini">Gallery Item</h2>
             </header>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. </p>
+            <div class="content" data-barley="gallery_body" data-barley-editor="plus">
+                <p>Start typing...</p>
             </div>
         </article>
         <aside>
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. </p>
+            <div data-barley="gallery_aside" data-barley-editor="plus">
+                <p>Start typing... </p>
             </div>
         </aside>
     </div>
@@ -111,6 +115,9 @@
     </div> <!--end main container-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        $('.carousel .carousel-inner figure.item').not(':first').removeClass('active');
+    </script>
     <script src="template.js"></script>
 
 </body>

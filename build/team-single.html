@@ -17,6 +17,10 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="Full Blog Entries Feed" href="/feed" />
+
 </head>
 <body>
     <div class="container site-wrapper">
@@ -76,21 +80,20 @@
     <div class="main-content member">
         <aside>
             <figure>
-                <div class="member-photo">
+                <div class="member-photo" data-barley="team_image" data-barley-editor="image-special">
                     <img src="http://lorempixel.com/g/800/600/people">
                 </div>
-                <div class="blurb">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. </p>
+                <div class="blurb" data-barley="team_blurb" data-barley-editor="plus">
+                    <p>Short aside, quote, list of skills, etc.</p>
                 </div>
             </figure>
         </aside>
         <article>
             <header>
-                <h2 class="page-title">John Doe</h2>
+                <h2 class="page-title" data-barley="team_title" data-barley-editor="mini">Team Member Name</h2>
             </header>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. </p>
-                <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam.Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <div class="content" data-barley="team_body" data-barley-editor="plus">
+                <p>Team member bio...</p>
             </div>
         </article>
     </div>
@@ -114,6 +117,9 @@
     </div> <!--end main container-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        $('.carousel .carousel-inner figure.item').not(':first').removeClass('active');
+    </script>
     <script src="template.js"></script>
 
 </body>

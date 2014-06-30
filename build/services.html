@@ -17,6 +17,10 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="Full Blog Entries Feed" href="/feed" />
+
 </head>
 <body>
     <div class="container site-wrapper">
@@ -75,74 +79,18 @@
 
     <div class="masthead">
         <div class="container">
-            <h1>Our Services</h1>
+            <h1 data-barley="servicepage_title" data-barley-editor="mini">Our Services</h1>
         </div>
     </div>
     <div class="main-content">
         <section class="text-block-area services">
+            <!-- repeatoldest:services:50 -->
             <div class="text-block">
-                <i class="icon fa fa-car"></i>
-                <h2><a href="services-single.html">Service</a></h2>
-                <div class="content">
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-                </div>
+                <i class="icon fa fa-check"></i>
+                <h2><a href="%URL%">%TITLE%</a></h2>
+                <div class="content" data-barley="services_%ID%_excerpt" data-barley-editor="plus">%EXCERPT%</div>
             </div>
-            <div class="text-block">
-                <i class="icon fa fa-coffee"></i>
-                <h2><a href="services-single.html">Service</a></h2>
-                <div class="content">
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
-            </div>
-            <div class="text-block">
-                <i class="icon fa fa-legal"></i>
-                <h2><a href="services-single.html">Service</a></h2>
-                <div class="content">
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
-            </div>
-            <div class="text-block">
-                <i class="icon fa fa-car"></i>
-                <h2><a href="services-single.html">Service</a></h2>
-                <div class="content">
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-                </div>
-            </div>
-            <div class="text-block">
-                <i class="icon fa fa-coffee"></i>
-                <h2><a href="services-single.html">Service</a></h2>
-                <div class="content">
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
-            </div>
-            <div class="text-block">
-                <i class="icon fa fa-legal"></i>
-                <h2><a href="services-single.html">Service</a></h2>
-                <div class="content">
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
-            </div>
-            <div class="text-block">
-                <i class="icon fa fa-car"></i>
-                <h2><a href="services-single.html">Service</a></h2>
-                <div class="content">
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
-                </div>
-            </div>
-            <div class="text-block">
-                <i class="icon fa fa-coffee"></i>
-                <h2><a href="services-single.html">Service</a></h2>
-                <div class="content">
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
-            </div>
-            <div class="text-block">
-                <i class="icon fa fa-legal"></i>
-                <h2><a href="services-single.html">Service</a></h2>
-                <div class="content">
-                    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
-            </div>
+            <!-- endrepeatoldest -->
         </section>
     </div>
     
@@ -165,6 +113,9 @@
     </div> <!--end main container-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+        $('.carousel .carousel-inner figure.item').not(':first').removeClass('active');
+    </script>
     <script src="template.js"></script>
 
 </body>

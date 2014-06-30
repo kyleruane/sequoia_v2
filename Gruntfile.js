@@ -51,6 +51,13 @@ module.exports = function(grunt) {
             flatten: true, 
             filter: 'isFile'
           },
+          {
+            expand: true, 
+            src: ['settings.json'], 
+            dest: 'build/',
+            flatten: true, 
+            filter: 'isFile'
+          }
         ]
       }
     },

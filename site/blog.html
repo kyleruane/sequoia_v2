@@ -1,51 +1,48 @@
 include "header.html"
 
     <div class="masthead">
+        <div class="background"></div>
         <div class="container">
-            <h1>Blog</h1>
+            <h1 data-barley="business_blog_title" data-barley-editor="mini">Blog</h1>
         </div>
+        <!-- owner -->
+        <div id="blog-mast-target" class="bg-target">
+            <div class="target-wrap" data-barley="blog_masthead" data-barley-editor="image-special">
+                <img src="http://37.media.tumblr.com/f6c67ec2821a91051e4175f8a102e1e2/tumblr_n6rzpcsMk41st5lhmo1_1280.jpg" />
+            </div>
+        </div>
+        <div id="blog-color-target" class="color-target">
+            <i class="fa fa-tint"></i>
+        </div>
+        include "color-picker.html" 
+        <!-- endowner -->
     </div>
     <div class="main-content divide">
         <article>
+            <!-- repeat:blogpost:6 -->
             <div class="post">
                 <header>
-                    <h2 class="post-title"><a href="post.html">Post Title</a></h2>
+                    <h2 class="post-title"><a href="%URL%">%TITLE%</a></h2>
                 </header>
-                <div class="meta"><span class="date">November 30, 2099</span></div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
+                <div class="meta"><span class="date" id="blogpost_%ID%_published_on" data-barley-publish-post="%ID%">%PUBLISHED_ON%</span></div>
+                <div class="content" data-barley="blogpost_%ID%_excerpt" data-barley-editor="plus">%EXCERPT%</div>
             </div>
-            <div class="post">
-                <header>
-                    <h2 class="post-title"><a href="post.html">Post Title</a></h2>
-                </header>
-                <div class="meta"><span class="date">November 30, 2099</span></div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
-            </div>
-            <div class="post">
-                <header>
-                    <h2 class="post-title"><a href="post.html">Post Title</a></h2>
-                </header>
-                <div class="meta"><span class="date">November 30, 2099</span></div>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                </div>
-            </div>
+            <!-- endrepeat -->
+            <ul class="pager">
+                <!-- previous --><li class="previous"><a href="#"><i class="fa fa-angle-left"></i> Newer</a></li><!-- endprevious -->
+                <!-- next --><li class="next"><a href="#">Older <i class="fa fa-angle-right"></i></a></li><!-- endnext -->
+            </ul>
         </article>
         <aside>
-            <div>
-                <h4>Heading</h4>
-                <br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas sed diam eget risus varius blandit sit amet non magna. Maecenas faucibus mollis interdum.</p>
+            <div data-barley="business_blog_sidebarcontent" data-barley-editor="plus">
+                <h4>Sidebar</h4>
+                <p></p>
+                <p>Start typing...</p>
             </div>
         </aside>
     </div>
+
+    <div class="masthead-color" data-barley="masthead-color" data-barley-editor="mini" style="visibility: hidden;">#333</div>
     
 include "promo.html"
 include "footer.html"
