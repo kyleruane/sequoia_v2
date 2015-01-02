@@ -5,7 +5,8 @@
     "content_types": {
     		"service": "Service",
     		"team": "Team Member",
-            "gallery": "Gallery Piece"
+            "gallery": "Gallery Piece",
+            "slider": "Slider Panel"
     }
     
 }
