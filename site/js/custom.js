@@ -37,8 +37,9 @@ $(document).ready(function(){
 	});
 
 	// Lightbox source
-	var src = $(this).closest('figure').children('.image-placeholder').find('img').attr('src');
-	$('.thumbnails .item figure a.thumbnail').attr('href', src);
+	$('.gallery.thumbnails figure').each(function(){
+		$(this).find('a.thumbnail').attr('href', $(this).find('.image-placeholder img').attr('src'));
+	});
 
 	// Open Color Picker
 	$('.color-target').on( 'click', function() { 
@@ -75,6 +76,12 @@ $(document).ready(function(){
 
 	if ($('.masthead').css('background-color').length != 0) {
 		$('.masthead .background').addClass('grayscale');
+	}
+
+	// Google Map for Contact page
+	if ( $('#googlemap') ) {
+		business_address = $('[data-barley="business_company_address"] p').text();
+		$('#googlemap').attr('src','https://www.google.com/maps/embed/v1/place?key=AIzaSyA9KXYGXec5oKsHsR2Y43cz0AI-Cv9_Mxw&q='+encodeURIComponent(business_address));
 	}
 
 
