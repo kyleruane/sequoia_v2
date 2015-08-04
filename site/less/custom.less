@@ -22,6 +22,7 @@ body {
 		padding-top: 20px;
 		font-weight: 300;
 		line-height: 1.6;
+		font-size: 15px;
 		header {
 			.border-style(bottom);
 			margin-bottom: 36px;
@@ -37,8 +38,11 @@ body {
 		}
 		p {
 			font-weight: 300;
-			margin: 0 0 20px;
+			margin: 0 0 24px;
 			line-height: 1.6;
+		}
+		img {
+			max-width: 100%;
 		}
 	}
 	aside {
@@ -127,6 +131,12 @@ body {
 		}
 		aside {
 			display: none;
+		}
+	}
+	&.full {
+		article {
+			width: 100%;
+			float: none;
 		}
 	}
 	&.member {
@@ -220,14 +230,15 @@ body {
 }
 .navbar-toggle { 
 	position: absolute;
-	top: 10px;
-	left: 10px;
-	padding: 6px;
+	top: 14px;
+	left: 12px;
+	padding: 8px 7px;
 	margin: 0;
 	border-radius: 3px;
 	.icon-bar {
 		width: 15px;
 		height: 2px;
+		background-color: lighten(@brand-primary, 5%);
 		&+.icon-bar {
 			margin-top: 3px;
 		}
@@ -246,7 +257,7 @@ body {
 		.clearfix();
 	}
 	h1 {
-		.make-md-column(4);
+		.make-sm-column(4);
 		font-size: 40px;
 		margin: 0;
 		height: 120px;
@@ -259,7 +270,7 @@ body {
 		}
 	}
 	nav {
-		.make-md-column(8);
+		.make-sm-column(8);
 		.clearfix();
 		height: 120px;
 		display: none;
@@ -273,11 +284,14 @@ body {
 				display: inline-block;
 				float: left;
 				font-size: 14px;
-				margin: 0 20px;
+				margin: 0 14px;
 				line-height: 1.2;
 				font-weight: 400;
 				&:last-child {
 					margin-right: 0;
+				}
+				@media (min-width: 800px) {
+					margin: 0 20px;
 				}
 				a {
 					&:hover {
@@ -397,7 +411,7 @@ body {
 		height: 54px;
 		width: 54px;
 		border-radius: 50%;
-		background: fadeout(black, 60%);
+		background: fadeout(black, 15%);
 		text-align: center;
 		font-size: 46px;
 		line-height: 52px;
@@ -442,6 +456,11 @@ body {
 		background: url(../images/shadow_curl.png) top center no-repeat;
 		background-size: 100%; 
 	}
+	.item {
+		img {
+			width: 100%;
+		}
+	}
 	.carousel-caption {
 		position: absolute;
 		left: 10%;
@@ -464,6 +483,12 @@ body {
 	left: auto;
 	right: 26px;
 	text-align: right;
+	li {
+		margin: 1px 3px;
+		&.active {
+			margin: 0 3px;
+		}
+	}
 }
 .text-block-area {
 	.row;
@@ -622,6 +647,9 @@ body {
 		.item {
 			.make-md-column(4);
 			margin-bottom: 40px;
+			&:nth-child(3n+4) {
+				clear: both;
+			}
 		}
 		figure {
 			a {
@@ -882,7 +910,7 @@ body {
 	border-radius: 0 !important;
 	margin-bottom: 10px;
 	position: relative;
-	background: #777;
+	background: #111;
 	.container {
 		height: 100%;
 		padding-bottom: 2px;
@@ -909,7 +937,7 @@ body {
 		background-position: center center;
 		background-size: cover;
 		&.grayscale {
-			opacity: 0.2;
+			opacity: 0.35;
 		}
 	}
 }
@@ -1074,6 +1102,12 @@ body {
 	top: 14px;
 	z-index: 300;
 }
+body.barley-bar-visible .mobile-navbar { top: 56px; }
+body.barley-bar-visible #mobile-nav { top: 56px; }
+
+#barley-bar {
+	left: 0 !important;
+}
 
 @media (min-width: 768px) {
 	.mobile-navbar {
@@ -1227,7 +1261,7 @@ body {
 		&>.item {
 			height: 240px;
 			overflow: hidden;
-			&>img {
+			img {
 				height: 100%;
 				width: auto;
 				max-width: none;

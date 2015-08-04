@@ -1,9 +1,17 @@
 include "header.html"
 
     <div class="masthead">
+        <div class="background"></div>
         <div class="container">
             <h1 data-barley="teampage_title" data-barley-editor="mini">Our Team</h1>
         </div>
+        <!-- owner -->
+        <div id="team-mast-target" class="bg-target">
+            <div class="target-wrap" data-barley="teampage_masthead" data-barley-editor="image">
+                <img src="http://37.media.tumblr.com/f6c67ec2821a91051e4175f8a102e1e2/tumblr_n6rzpcsMk41st5lhmo1_1280.jpg" />
+            </div>
+        </div>
+        <!-- endowner -->
     </div>
     <div class="main-content">
         <section class="text-block-area team">
@@ -18,7 +26,7 @@ include "header.html"
                     </div>
                 </figure>
                 <h2><a href="%URL%">%TITLE%</a></h2>
-                <div class="content" data-barley="team_%ID%_excerpt" data-barley-editor="plus">%EXCERPT%</div>
+                <div class="content" data-barley="team_excerpt" data-barley-editor="plus">%EXCERPT%</div>
             </div>
             <!-- endrepeatoldest -->
 
